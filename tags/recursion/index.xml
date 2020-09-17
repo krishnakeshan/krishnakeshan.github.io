@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recursion on K-Flag</title>
+    <link>https://krishnakeshan.github.io/tags/recursion/</link>
+    <description>Recent content in recursion on K-Flag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://krishnakeshan.github.io/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting Intricate Recursive Functions to Iterative Code</title>
+      <link>https://krishnakeshan.github.io/posts/recursion-to-iteration/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/posts/recursion-to-iteration/</guid>
+      <description>Recursive functions are pretty awesome. They allow programmers to solve problems that are naturally visualized as self-repeating or branching, and for this reason they&amp;rsquo;re also easier to understand compared to iterative code. So why give up all this goodness and even think about anything else?
+Pros of iteration over recursion   Overhead of functions (recursive or otherwise): Functions are super helpful in that they encapsulate code and let us call them as many times as we like and they&amp;rsquo;ll do exactly what we tell them.</description>
+    </item>
+    
+  </channel>
+</rss>

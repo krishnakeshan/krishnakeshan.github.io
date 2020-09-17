@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on K-Flag</title>
+    <link>https://krishnakeshan.github.io/tags/android/</link>
+    <description>Recent content in android on K-Flag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://krishnakeshan.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page - Turn your computer into a home server</title>
+      <link>https://krishnakeshan.github.io/projects/page/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/projects/page/</guid>
+      <description>GitHub:
+ Page-Android page-python  Summary  Clean UI Built on Android with Java Leverages Architecture Components:  Room: Storage of defined models with the ability to serve live data. This keeps the application reactive and consistent without the need to manually update UI components when data changes. LiveData: The above-mentioned realtime nature of the application is made possible mainly because of LiveData in conjunction with Room. LiveData keeps datastreams up-to-date and allows propagation of changes through multiple layers.</description>
+    </item>
+    
+  </channel>
+</rss>

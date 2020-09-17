@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K-Flag</title>
+    <link>https://krishnakeshan.github.io/</link>
+    <description>Recent content on K-Flag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://krishnakeshan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page - Turn your computer into a home server</title>
+      <link>https://krishnakeshan.github.io/projects/page/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/projects/page/</guid>
+      <description>GitHub:
+ Page-Android page-python  Summary  Clean UI Built on Android with Java Leverages Architecture Components:  Room: Storage of defined models with the ability to serve live data. This keeps the application reactive and consistent without the need to manually update UI components when data changes. LiveData: The above-mentioned realtime nature of the application is made possible mainly because of LiveData in conjunction with Room. LiveData keeps datastreams up-to-date and allows propagation of changes through multiple layers.</description>
+    </item>
+    
+    <item>
+      <title>Converting Intricate Recursive Functions to Iterative Code</title>
+      <link>https://krishnakeshan.github.io/posts/recursion-to-iteration/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/posts/recursion-to-iteration/</guid>
+      <description>Recursive functions are pretty awesome. They allow programmers to solve problems that are naturally visualized as self-repeating or branching, and for this reason they&amp;rsquo;re also easier to understand compared to iterative code. So why give up all this goodness and even think about anything else?
+Pros of iteration over recursion   Overhead of functions (recursive or otherwise): Functions are super helpful in that they encapsulate code and let us call them as many times as we like and they&amp;rsquo;ll do exactly what we tell them.</description>
+    </item>
+    
+    <item>
+      <title>CLRS Exercise 6.1.1 Solution</title>
+      <link>https://krishnakeshan.github.io/posts/clrs-exercise-6.1.1/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/posts/clrs-exercise-6.1.1/</guid>
+      <description>Question: What are the minimum and maximum numbers of elements in a heap of height &amp;lsquo;h&amp;rsquo;? Let&amp;rsquo;s start by defining what a heap is. A heap is a data structure that can be viewed as an almost complete binary tree.
+What&amp;rsquo;s an almost complete binary tree? It&amp;rsquo;s basically a complete binary tree where the last level is not full. This may seem confusing at first as that definition also fits the definition of a complete binary tree, but the main difference lies in that the almost complete binary tree is not filled at the last level.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://krishnakeshan.github.io/about/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/about/</guid>
+      <description>I&amp;rsquo;m Krishna. I&amp;rsquo;m a Java and Android developer. I also work with computer networks, Linux programming, and a few open source projects. I live in Bangalore (India) and I have a Bachelor&amp;rsquo;s degree in Computer Science and Engineering!
+Hit me up, tell me what&amp;rsquo;s up with you.</description>
+    </item>
+    
+    <item>
+      <title>Herl - An application to create short links with dynamic destinations</title>
+      <link>https://krishnakeshan.github.io/projects/herl/</link>
+      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/projects/herl/</guid>
+      <description>Live At  herl.me  Summary  Backend built with Go and MongoDB Frontend built with HTML, CSS, JS and Bootstrap Authentication and analytics built with Firebase SSL/TLS certificate provided by Let&amp;rsquo;s Encrypt Hosted on Google Cloud Platform&amp;rsquo;s Compute Engine offering on the basic instance. Goroutines allow concurrent handling of large numbers of client requests simultaneously. This coupled with Go&amp;rsquo;s speed result in a monster of a server. Mongo&amp;rsquo;s interface to Go allow easy interaction with the database.</description>
+    </item>
+    
+    <item>
+      <title>Converting Videos to Frames in OpenCV</title>
+      <link>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</guid>
+      <description>Here’s how you can read a video file in OpenCV and convert it to individual frames:
+import cv2 as cv import numpy as np # open reference to video file videoReference = cv.VideoCapture(&amp;#39;path_to_video&amp;#39;) # for example &amp;#39;video.mp4&amp;#39; or &amp;#39;~/Downloads/video.mp4&amp;#39; # create an ndarray for storing frames frames = [] read_result = videoReference.read() # the read() method returns a tuple like (frame_exists, frame) while read_result[0]: frames.append(read_result[1]) read_result = videoReference.read() frames = np.</description>
+    </item>
+    
+  </channel>
+</rss>

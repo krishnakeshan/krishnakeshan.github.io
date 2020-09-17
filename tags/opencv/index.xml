@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>opencv on K-Flag</title>
+    <link>https://krishnakeshan.github.io/tags/opencv/</link>
+    <description>Recent content in opencv on K-Flag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://krishnakeshan.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting Videos to Frames in OpenCV</title>
+      <link>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</guid>
+      <description>Here’s how you can read a video file in OpenCV and convert it to individual frames:
+import cv2 as cv import numpy as np # open reference to video file videoReference = cv.VideoCapture(&amp;#39;path_to_video&amp;#39;) # for example &amp;#39;video.mp4&amp;#39; or &amp;#39;~/Downloads/video.mp4&amp;#39; # create an ndarray for storing frames frames = [] read_result = videoReference.read() # the read() method returns a tuple like (frame_exists, frame) while read_result[0]: frames.append(read_result[1]) read_result = videoReference.read() frames = np.</description>
+    </item>
+    
+  </channel>
+</rss>

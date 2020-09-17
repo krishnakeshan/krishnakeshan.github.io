@@ -1,0 +1,110 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on K-Flag</title>
+        <link>https://krishnakeshan.github.io/posts/</link>
+        <description>Recent content in Posts on K-Flag</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://krishnakeshan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Converting Intricate Recursive Functions to Iterative Code</title>
+            <link>https://krishnakeshan.github.io/posts/recursion-to-iteration/</link>
+            <pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://krishnakeshan.github.io/posts/recursion-to-iteration/</guid>
+            <description>Recursive functions are pretty awesome. They allow programmers to solve problems that are naturally visualized as self-repeating or branching, and for this reason they&amp;rsquo;re also easier to understand compared to iterative code. So why give up all this goodness and even think about anything else?
+Pros of iteration over recursion   Overhead of functions (recursive or otherwise): Functions are super helpful in that they encapsulate code and let us call them as many times as we like and they&amp;rsquo;ll do exactly what we tell them.</description>
+            <content type="html"><![CDATA[<p>Recursive functions are pretty awesome. They allow programmers to solve problems that are naturally visualized as self-repeating or branching, and for this reason they&rsquo;re also easier to understand compared to iterative code. So why give up all this goodness and even think about anything else?</p>
+<h3 id="pros-of-iteration-over-recursion">Pros of iteration over recursion</h3>
+<ol>
+<li>
+<h4 id="overhead-of-functions-recursive-or-otherwise">Overhead of functions (recursive or otherwise):</h4>
+<p>Functions are super helpful in that they encapsulate code and let us call them as many times as we like and they&rsquo;ll do exactly what we tell them. But this convenience comes at a cost, the call stack!</p>
+<p>Every time a function is called, the runtime must maintain records of where the previous function paused execution, what data was passed to the called function, what data is in scope at what point and it might have to do all this recursively. Now of course these fit right into the framework of the language itself but they&rsquo;re an overhead nonetheless.</p>
+</li>
+<li>
+<h4 id="recursion-limits">Recursion limits</h4>
+<p>All the overhead we talked about above, sometimes it drives the problem beyond from being just inefficient to the point where it could cause your program to crash if used carelessly. In fact to this effect, Python even imposes a (configurable, but not recommended) limit on the maximum levels to which you can recurse. And they provide a pretty strong argument as to why: recursive programs can be represented as iterative code and they&rsquo;re always faster and safer (within reason, obviously).</p>
+<p>In other languages, these limits although not explicit, do exist simply by virtue of how functions require memory. Even if your function does something as trivial as printing something to the console, the overhead involved in calling it does add up over significant recursion depths.</p>
+</li>
+</ol>
+<p>The grass isn&rsquo;t too green on the iteration side either, although a little greener.</p>
+<h3 id="cons-of-iteration-over-recursion">Cons of iteration over recursion</h3>
+<ol>
+<li>
+<h4 id="facility-provided-by-overhead">Facility provided by overhead:</h4>
+<p>All the overhead I&rsquo;ve been ranting about, it&rsquo;s not just vanity that the function likes to keep for itself. It uses that overhead to provide some pretty cool features. These include the function&rsquo;s call stack, the ability to call itself (or others) again without worrying about the order of returns, the ability to return values to callers and more. These infact play into the very approach we take in programming anything and are natural to us.</p>
+<p>With the iterative approach, we have to manage these complexities and make sure it works the way the runtime would help us with functions</p>
+</li>
+<li>
+<h4 id="harder-to-understand-initially">Harder to understand (initially):</h4>
+<p>There&rsquo;s no free lunch. Iterative code brings speed, efficiency and stability but also complexity and complexity that can quickly get out of hand with functions that have intricate workings. For example, as we&rsquo;ll see momentarily, you in a way take over responsibility from the runtime to execute code, fulfill dependencies, return values and call further functions (and perform all these actions again for the called function) and much more. This code can quickly become unmaintainable if not done carefully and even then sometimes it&rsquo;s just unwieldy.</p>
+<p>This approach makes it harder for you to debug your program.</p>
+</li>
+</ol>
+<p>This debate like almost any other can go on for quite some time but let&rsquo;s leave that to the groups who lean towards one approach or another. Let&rsquo;s get to what you&rsquo;re really here for, the code!</p>
+<hr>
+<h3 id="converting-recursive-code-to-iterative">Converting recursive code to iterative</h3>
+<p>I use the following approach when I want to perform this conversion. There might be other, more efficient or easier ways to do this, but this approach works for me pretty good.</p>
+<h4 id="step-1-understand-your-function">Step 1: Understand your function</h4>
+<p>Performing this conversion, your code as it is laid out in your function might drastically change in the iterative form. This is made much easier if you understand intuitively what it is your function does not just in terms of its lines but also in terms of its usage of other functions.</p>
+<h4 id="step-2-keep-track-of-exit-and-entry-points">Step 2: Keep track of &lsquo;exit&rsquo; and &lsquo;entry&rsquo; points:</h4>
+<p>I loosely define the terms <em>&lsquo;entry&rsquo;</em> and <em>&lsquo;exit&rsquo;</em> as the points where control leaves your function (whether temporarily or forever) or enters it (whether for the first time or returning). These are mostly other function calls or return statements, so they aren&rsquo;t hard to track. Following Step 1 should help you with this.</p>
+<h4 id="step-3-get-your-stacks">Step 3: Get your stacks!</h4>
+<p>You must maintain a minimum of two stacks. One is the <em>&lsquo;call stack&rsquo;</em>. We&rsquo;ll use this stack to guide the loop to the various parts of your code as a function would. The other is the <em>&lsquo;return stack&rsquo;</em>. We&rsquo;ll use this stack to implement the returning mechanism that functions have since loops have no inherent return mechanism.</p>
+<p><strong>The Call Stack</strong></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>CLRS Exercise 6.1.1 Solution</title>
+            <link>https://krishnakeshan.github.io/posts/clrs-exercise-6.1.1/</link>
+            <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://krishnakeshan.github.io/posts/clrs-exercise-6.1.1/</guid>
+            <description>Question: What are the minimum and maximum numbers of elements in a heap of height &amp;lsquo;h&amp;rsquo;? Let&amp;rsquo;s start by defining what a heap is. A heap is a data structure that can be viewed as an almost complete binary tree.
+What&amp;rsquo;s an almost complete binary tree? It&amp;rsquo;s basically a complete binary tree where the last level is not full. This may seem confusing at first as that definition also fits the definition of a complete binary tree, but the main difference lies in that the almost complete binary tree is not filled at the last level.</description>
+            <content type="html"><![CDATA[<h2 id="question-what-are-the-minimum-and-maximum-numbers-of-elements-in-a-heap-of-height-h">Question: What are the minimum and maximum numbers of elements in a heap of height &lsquo;h&rsquo;?</h2>
+<p>Let&rsquo;s start by defining what a heap is. A <em>heap</em> is a data structure that can be viewed as an <strong>almost complete binary tree</strong>.</p>
+<p>What&rsquo;s an almost complete binary tree? It&rsquo;s basically a complete binary tree where the last level is <strong>not full</strong>. This may seem confusing at first as that definition also fits the definition of a complete binary tree, but the main difference lies in that the almost complete binary tree is <strong>not</strong> filled at the last level. The complete binary tree, on the other hand, <strong>may or may not be</strong> filled at its lowest level.</p>
+<h3 id="height-of-a-binary-tree">Height of a binary tree</h3>
+<p>The height of a binary tree is the number of edges on the longest path from the root to any leaf on the tree. An easy way to visualise this is the <em>number of levels - 1</em>.</p>
+<h3 id="minimum-number-of-elements-in-a-heap-of-height-h">Minimum number of elements in a heap of height &lsquo;h&rsquo;:</h3>
+<p>A heap of height <em>h</em> would contain the least possible number of elements if its last level had only 1 child. So, the levels including and before the last level form a perfect binary tree. Since the number of elements in a perfect binary tree of height <em>h</em> is 2<sup>(h+1)</sup> - 1, the number of nodes in the perfect tree of the heap would be 2<sup>(h-1+1)</sup> - 1. To obtain the size of the minimum heap, we simply add the single leaf to the perfect binary tree, giving us the size: <strong>2<sup>h</sup></strong>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Converting Videos to Frames in OpenCV</title>
+            <link>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</link>
+            <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://krishnakeshan.github.io/posts/video-to-frames-opencv/</guid>
+            <description>Here’s how you can read a video file in OpenCV and convert it to individual frames:
+import cv2 as cv import numpy as np # open reference to video file videoReference = cv.VideoCapture(&amp;#39;path_to_video&amp;#39;) # for example &amp;#39;video.mp4&amp;#39; or &amp;#39;~/Downloads/video.mp4&amp;#39; # create an ndarray for storing frames frames = [] read_result = videoReference.read() # the read() method returns a tuple like (frame_exists, frame) while read_result[0]: frames.append(read_result[1]) read_result = videoReference.read() frames = np.</description>
+            <content type="html"><![CDATA[<p>Here’s how you can read a video file in OpenCV and convert it to individual frames:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cv2 <span style="color:#f92672">as</span> cv
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e"># open reference to video file</span>
+videoReference <span style="color:#f92672">=</span> cv<span style="color:#f92672">.</span>VideoCapture(<span style="color:#e6db74">&#39;path_to_video&#39;</span>) <span style="color:#75715e"># for example &#39;video.mp4&#39; or &#39;~/Downloads/video.mp4&#39;</span>
+
+<span style="color:#75715e"># create an ndarray for storing frames</span>
+frames <span style="color:#f92672">=</span> []
+read_result <span style="color:#f92672">=</span> videoReference<span style="color:#f92672">.</span>read() <span style="color:#75715e"># the read() method returns a tuple like (frame_exists, frame)</span>
+<span style="color:#66d9ef">while</span> read_result[<span style="color:#ae81ff">0</span>]:
+    frames<span style="color:#f92672">.</span>append(read_result[<span style="color:#ae81ff">1</span>])
+    read_result <span style="color:#f92672">=</span> videoReference<span style="color:#f92672">.</span>read()
+
+frames <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(frames)
+</code></pre></div><p>The main constructors and methods are VideoCapture() and read(). VideoCapture() creates a reference to a video stream either as an offline file, a network stream, a device stream or any other source (see documentation for available methods).</p>
+<p>The read() method reads a single frame at a time from the video and returns a tuple similar to (frame_exists, frame). frame_exists is a bool value and tells us whether another frame exists. This could be false for example, if the read() method reaches the last frame of the video. frame is, as the name suggests, a frame of the video.</p>
+<p>You must call read() for every frame of the video.</p>
+<p>To reset the read() method to the first frame, simply reload the file.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

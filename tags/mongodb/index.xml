@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mongodb on K-Flag</title>
+    <link>https://krishnakeshan.github.io/tags/mongodb/</link>
+    <description>Recent content in mongodb on K-Flag</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://krishnakeshan.github.io/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Herl - An application to create short links with dynamic destinations</title>
+      <link>https://krishnakeshan.github.io/projects/herl/</link>
+      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://krishnakeshan.github.io/projects/herl/</guid>
+      <description>Live At  herl.me  Summary  Backend built with Go and MongoDB Frontend built with HTML, CSS, JS and Bootstrap Authentication and analytics built with Firebase SSL/TLS certificate provided by Let&amp;rsquo;s Encrypt Hosted on Google Cloud Platform&amp;rsquo;s Compute Engine offering on the basic instance. Goroutines allow concurrent handling of large numbers of client requests simultaneously. This coupled with Go&amp;rsquo;s speed result in a monster of a server. Mongo&amp;rsquo;s interface to Go allow easy interaction with the database.</description>
+    </item>
+    
+  </channel>
+</rss>
